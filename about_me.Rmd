@@ -1,0 +1,12 @@
+---
+title: "About me"
+author: "Risa Dickerman"
+date: "2026-10-30"
+output: html_document
+---
+
+# This page has information about me
+
+I am a student in P8105.
+
+
