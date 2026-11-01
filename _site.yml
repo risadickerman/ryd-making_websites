@@ -11,4 +11,4 @@ navbar:
       href: https://github.com/risadickerman
 output:
   html_document:
-    theme: cerulean
+    theme: flatly

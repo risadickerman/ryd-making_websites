@@ -16,7 +16,7 @@
 <script src="site_libs/header-attrs-2.32/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -33,6 +33,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
@@ -221,6 +222,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -345,6 +349,14 @@ div.tocify {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">Main website</h1>
@@ -364,8 +376,8 @@ src="https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif" /></p>
 <h1>Here’s a subsection</h1>
 <p>-here’s some additional text</p>
 <pre class="r"><code>rnorm(10)</code></pre>
-<pre><code>##  [1]  0.6316594 -0.4636939 -0.1655928 -0.8250785 -1.1743704  1.5124582
-##  [7] -0.1268500 -0.7264170  0.6442305 -0.1621468</code></pre>
+<pre><code>##  [1] -0.24355888  0.07172584 -0.02194448 -1.28980211 -1.09785136  2.34655717
+##  [7] -0.93588142 -0.81498173  0.00354189 -0.31823346</code></pre>
 <div id="link-to-other-websites" class="section level2">
 <h2>Link to other websites</h2>
 <p><a
@@ -374,6 +386,9 @@ href="https://www.ecosia.org/search?q=google&amp;method=ecosiabrowsertopbar">Goo
 </div>
 <div id="local-image" class="section level2">
 <h2>Local image</h2>
+<p>Here’s something:</p>
+<p>(html version) <img src= "images/rabi.png" style = "width:75%"></p>
+<p>Use html because you can control styling of an image easier.</p>
 <p><img src="images/rabi.png" /></p>
 </div>
 <div id="link-to-page-within-the-site" class="section level2">
@@ -383,6 +398,19 @@ href="https://www.ecosia.org/search?q=google&amp;method=ecosiabrowsertopbar">Goo
 if you exit and come back you will see a new website that will allow you
 to rerender everything that you have a Build folder which you can use to
 rerender each page that you have.</p>
+<p>Use bootswatch for colors. Bootstrap for images.</p>
+<p>Should think about how to structure websites.</p>
+</div>
+<div id="something" class="section level2 tabset">
+<h2 class="tabset">Something</h2>
+<div id="by-product" class="section level3">
+<h3>By product</h3>
+<p>First tab</p>
+</div>
+<div id="by-region" class="section level3">
+<h3>By Region</h3>
+<p>Second tab. New section</p>
+</div>
 </div>
 </div>
 
@@ -421,6 +449,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 <script>
 $(document).ready(function ()  {

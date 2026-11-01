@@ -2,6 +2,7 @@
 title: "Main website"
 output: 
   html_document:
+    code_folding: hide 
     toc: true
     toc_float: true
 ---
@@ -34,6 +35,14 @@ rnorm(10)
 
 ## Local image
 
+Here's something:
+
+(html version)
+<img src= "images/rabi.png" style = "width:75%">
+
+Use html because you can control styling of an image easier.
+
+
 ![](images/rabi.png)
 
 ## Link to page within the site
@@ -42,3 +51,14 @@ rnorm(10)
 
 To ensure a new change is within all pages you will have to knit. Now if you exit and come back you will see a new website that will allow you to rerender everything that you have a Build folder which you can use to rerender each page that you have.
 
+Use bootswatch for colors. Bootstrap for images.
+
+Should think about how to structure websites.
+
+## Something {.tabset}
+
+### By product
+First tab
+
+### By Region
+Second tab. New section
